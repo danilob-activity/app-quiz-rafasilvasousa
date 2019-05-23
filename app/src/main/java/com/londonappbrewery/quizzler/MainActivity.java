@@ -5,9 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.londonappbrewery.quizzler.models.TrueFalse;
 
 public class MainActivity extends Activity {
 
@@ -50,17 +51,22 @@ public class MainActivity extends Activity {
 
         mTrueButton = findViewById(R.id.true_button);
         mFalseButton = findViewById(R.id.false_button);
-
         mScoreTextView = findViewById(R.id.score);
         mQuestionTextView = findViewById(R.id.question_text_view);
         mProgressBar = findViewById(R.id.progress_bar);
+
+        mIndex=0;
+        mScore=0;
+        mQuestion=mQuestionBank[mIndex].getQuestionID();
+        mQuestionTextView.setText(mQuestion);
+        mScoreTextView.setText(mScore+"/"+mQuestionBank.length);
 
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "True", Toast.LENGTH_LONG).show();
-//                checkAnswer(true);
-//                updateQuestion();
+                checkAnswer(true);
+                updateQuestion();
             }
         });
 
@@ -68,10 +74,24 @@ public class MainActivity extends Activity {
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                checkAnswer(false);
-//                updateQuestion();
+                Toast.makeText(getApplicationContext(), "False", Toast.LENGTH_LONG).show();
+                checkAnswer(false);
+                updateQuestion();
             }
         });
 
+    }
+
+    public void checkAnswer(boolean answer){
+        if (answer == mQuestionBank[mIndex].isAnswerID()){
+            mScore++;
+            Toast.makeText(getApplicationContext(), R.string.correct_toast,Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(getApplicationContext(), R.string.incorrect_toast,Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void updateQuestion(){
+        mIndex++;
     }
 }
