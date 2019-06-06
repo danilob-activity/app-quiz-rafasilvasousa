@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="true_button">Verdadeiro</string>
+    <string name="false_button">Falso</string>
+    <string name="initial_score">Pontuação 0/13</string>
+    <string name="incorrect_toast">Errado!</string>
+    <string name="correct_toast">Certo!</string>
+    <string name="question_1">Dia dos Namorados é banido na Arábia Saudita</string>
+    <string name="question_2">O sangue de lesma é verde.</string>
+    <string name="question_3">Aproximadamente um quarto dos ossos humanos estão no pé.</string>
+    <string name="question_4">A área total dos dois pulmões humanos medem cerca de 70 metros quadrados.</string>
+    <string name="question_5">Em Virginia do Oeste, EUA, se você bater em um animal com o carro você pode levá-lo para casa para comer.</string>
+    <string name="question_6">Em Londres, Inglaterra, se acontecer de você morrer na Casa do parlamento, você tecnicamente terá um funeral de estado porque o prédio é considerado um local muito sagrado.</string>
+    <string name="question_7">É ilegal fazer xixi no oceano em Portugal.</string>
+    <string name="question_13">Chocolate afeta coração e sistema nervoso de cães; algumas gramas são suficiente para matar um cachorro pequeno.</string>
+    <string name="question_8">Você pode levar uma vada escada abaixo, mas não escada acima.</string>
+    <string name="question_9">Google era chamando originalmente Backrub.</string>
+    <string name="question_10">o Nome do meio da mãe de Buzz Aldrin era Lua.</string>
+    <string name="question_11">O só mais alto produzido por um animal é 188 decibéis. Esse animal é o Elefante Africano.</string>
+    <string name="question_12">Nenhum pedaço quadrado de papel pode ser dobrado na metade mais de 7 vezes.</string>
+</resources>
